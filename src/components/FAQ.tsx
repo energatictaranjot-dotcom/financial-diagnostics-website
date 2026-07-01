@@ -8,14 +8,6 @@ import {
 
 const faqs = [
   {
-    q: "What is a SEBI Registered Investment Advisor (RIA)?",
-    a: "A SEBI RIA is a regulated professional bound by fiduciary duty to act in your best interest. Unlike distributors or bank relationship managers, we cannot earn hidden commissions from mutual fund houses, ensuring our advice is 100% unbiased."
-  },
-  {
-    q: "How are your fees structured?",
-    a: "We operate on a transparent, flat-fee or AUA (Assets Under Advice) model depending on portfolio size. There are no hidden charges, entry loads, or commissions baked into the products we recommend."
-  },
-  {
     q: "What is the minimum investment required to start?",
     a: "We typically work with families looking to invest ₹50,000+ monthly via SIP, or those with existing portfolios above ₹50 Lakhs. However, we are happy to consult motivated professionals starting their journey."
   },
@@ -25,7 +17,7 @@ const faqs = [
   },
   {
     q: "Do you only advise on mutual funds?",
-    a: "No. While mutual funds form the core of equity strategies, our holistic plan covers direct equity, fixed income, bonds, insurance optimization, and tax-saving instruments."
+    a: "No. While mutual funds form the core of equity strategies, our holistic plan covers fixed income, bonds, insurance optimization, and tax-saving instruments."
   },
   {
     q: "How do you handle market downturns?",

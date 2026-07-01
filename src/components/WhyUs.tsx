@@ -2,12 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const reasons = [
-  { num: "01", title: "SEBI Registered Advisor", desc: "Regulated and strictly compliant, ensuring your investments are in safe, qualified hands." },
-  { num: "02", title: "Unbiased Advice", desc: "We sit on your side of the table. Our recommendations are driven by your goals, not commissions." },
-  { num: "03", title: "Holistic Planning", desc: "We look at your entire financial life—taxes, insurance, investments, and estate—as one cohesive unit." },
-  { num: "04", title: "Dedicated Relationship Manager", desc: "Direct access to a senior expert who intimately understands your family's financial history." },
-  { num: "05", title: "Transparent Reporting", desc: "Crystal clear dashboarding and regular reviews. Know exactly where every rupee is deployed." },
-  { num: "06", title: "Tax-Efficient Strategies", desc: "Optimizing for post-tax returns, because what you keep matters more than what you earn." }
+  { num: "01", title: "Unbiased Advice", desc: "We sit on your side of the table. Our recommendations are driven by your goals, not commissions." },
+  { num: "02", title: "Holistic Planning", desc: "We look at your entire financial life—taxes, insurance, investments, and estate—as one cohesive unit." },
+  { num: "03", title: "Dedicated Relationship Manager", desc: "Direct access to a senior expert who intimately understands your family's financial history." },
+  { num: "04", title: "Transparent Reporting", desc: "Crystal clear dashboarding and regular reviews. Know exactly where every rupee is deployed." },
+  { num: "05", title: "Tax-Efficient Strategies", desc: "Optimizing for post-tax returns, because what you keep matters more than what you earn." }
 ];
 
 export default function WhyUs() {
