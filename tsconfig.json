@@ -1,11 +1,7 @@
 {
- 
   "extends": "./tsconfig.base.json",
   "include": ["src/**/*"],
   "compilerOptions": {
-    "incremental": true
-  }
-}
     "tsBuildInfoFile": ".tsbuildinfo",
     "noEmit": true,
     "jsx": "preserve",
@@ -18,9 +14,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "references": [
-    {
-      "path": "../../lib/api-client-react"
-    }
-  ]
+  "references": []
 }
