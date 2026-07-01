@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Deep navy #0A0F2C is ~231 63% 11% */
+  --background: 231 63% 11%;
+  /* Crisp white #FFFFFF is 0 0% 100% */
+  --foreground: 0 0% 100%;
+
+  /* Navy border #142466 ~228 67% 24% */
+  --border: 228 67% 24%;
+  --input: 228 67% 24%;
+  /* Gold #C9A84C is ~44 55% 54% */
+  --ring: 44 55% 54%;
+
+  /* #0D1B4B is ~226 70% 17% */
+  --card: 226 70% 17%;
+  --card-foreground: 226 100% 97%;
+  --card-border: 44 55% 54%;
+
+  --popover: 231 63% 11%;
+  --popover-foreground: 0 0% 100%;
+  --popover-border: 228 67% 24%;
+
+  /* Primary gold */
+  --primary: 44 55% 54%;
+  --primary-foreground: 231 63% 11%;
+
+  /* Secondary / Ghost */
+  --secondary: 228 67% 24%;
+  --secondary-foreground: 0 0% 100%;
+
+  /* Muted / Platinum text #A8B2D8 is ~227 34% 75% */
+  --muted: 228 67% 24%;
+  --muted-foreground: 227 34% 75%;
+
+  --accent: 44 55% 54%;
+  --accent-foreground: 231 63% 11%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --app-font-sans: 'Inter', sans-serif;
+  --app-font-serif: 'Playfair Display', serif;
+  --app-font-mono: Menlo, monospace;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 231 63% 11%;
+  --foreground: 0 0% 100%;
+  --border: 228 67% 24%;
+  --input: 228 67% 24%;
+  --ring: 44 55% 54%;
+  --card: 226 70% 17%;
+  --card-foreground: 226 100% 97%;
+  --card-border: 44 55% 54%;
+  --popover: 231 63% 11%;
+  --popover-foreground: 0 0% 100%;
+  --popover-border: 228 67% 24%;
+  --primary: 44 55% 54%;
+  --primary-foreground: 231 63% 11%;
+  --secondary: 228 67% 24%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 228 67% 24%;
+  --muted-foreground: 227 34% 75%;
+  --accent: 44 55% 54%;
+  --accent-foreground: 231 63% 11%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+  }
+  
+  .glass-card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .glass-card-hover:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 40px rgba(201, 168, 76, 0.15);
+    border-color: rgba(201, 168, 76, 0.5);
+  }
+
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #C9A84C, #F0D090, #C9A84C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 40px rgba(201, 168, 76, 0.15);
+  }
+  
+  .nav-glass {
+    background: rgba(10, 15, 44, 0.8);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+  }
+
+  .admin-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-radius: 4px;
+    padding: 10px 14px;
+    color: white;
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .admin-input:focus {
+    border-color: rgba(201, 168, 76, 0.6);
+  }
+
+  .admin-input::placeholder {
+    color: rgba(168, 178, 216, 0.5);
+  }
+}
